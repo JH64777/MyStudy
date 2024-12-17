@@ -1,4 +1,3 @@
-# MyStudy
+# 파이썬 공부
 
-I made this place for study(python)<br>
-You can Download source code and execute this whenever you want
+개인적으로 파이썬을 공부하고 배운 지식이 진짜 그러한지 테스트 해보기 위해 만든 공간입니다.
