@@ -96,3 +96,21 @@ print(name) # 글로벌 변수 출력
 같은 이름을 쓰게 되는 상황이라면 공간을 분리해서 변경할 수 있도록 해야할 것 같다.
 (ex> 전역 변수만 바꿀 수 있도록 하는 함수를 선언하고 해당 함수를 다른 함수 안에서 호출하는 방법 등)
 '''
+
+# E(Enclosed function locals)영역에 대해서
+
+def outer(): # Enclosed function locals 영역
+    num = 3
+    def inner(): # Local영역
+        print(num) # 이것을 기준으로
+    return inner
+
+f = outer()
+f()
+
+'''
+정리를 해보자면 inner 함수 안에 print(num)을 할 때 num을 찾는데
+Local 영역에 없으므로 Enclosed function locals영역을 확인한다
+그 영역은 Global과 local(내부함수) 사이에 있는 외부 함수 영역이고
+해당 영역에 num = 3이 있으므로 결론적으로는 3을 출력한다.
+'''
