@@ -9,11 +9,20 @@ class Robot: # 클래스 정의
         print("Hello World!")
         print(f"I'm {self.name}")
 
+    def Testing(self):
+        print(self.name)
+
 
 james = Robot("James") # 객체 생성
 james.tech1 = "drive" # 해당 속성은 생성된 객체 공간에서 생성되며 "drive"값을 tech1이라는 이름으로 바인딩 했다
 
 print(james.classVariable) # 클래스 영역에 있는 속성 출력
+
+Robot.Testing(james) # Robot을 통해서 직접 메서드를 호출할 때 self매개변수의 값으로 객체를 판별하는 것 같다.
+# 인스턴스 영역에는 인스턴스 속성밖에는 없고 인스턴스 메서드, 정적 메서드, 정적 속성은 클래스 영역(클래스가 정의되고 난 다음에 메모리에 할당되는 영역)에 존재한다
+# 그래서 인스턴스 메서드를 호출하면 클래스 영역에서 메서드를 찾은 다음 self매개변수에 인스턴스 자신(여기 예에서는 james)를 전달하여 호출한다
+# 위 구조로 작동하게 한 이유로는 메모리 공간을 효율적으로 사용하게 하기 위함인 것 같다
+
 '''
 클래스를 정의하면
 메모리 상에 정의된 클래스에 대한 공간이 할당된다.
