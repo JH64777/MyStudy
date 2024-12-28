@@ -1,4 +1,4 @@
-from abc import *
+from abc import * # 추상 클래스를 선언하기 위해 사용되어지는 모듈
 
 class Car(metaclass=ABCMeta): # 추상 클래스
     @abstractmethod 
