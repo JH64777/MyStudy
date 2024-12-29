@@ -24,11 +24,11 @@ menu.add_cascade(label="파일", menu=menu_file) # 최상단 메뉴 이름 정�
 menu.add_cascade(label="편집") # 이렇게 cascade만 하면 상위 메뉴 버튼만 존재함
 
 # 언어 메뉴 (메뉴에 라디오 버튼처럼 여러 선택지 중 한 가지만 선택할 수 있게 하는 방식도 적용 가능)
-menu_lang = Menu(menu, tearoff=0)
+menu_lang = Menu(menu, tearoff=0) # tearoff가 메뉴 항목을 분리시킬 수 있게끔 할 것인지 여부를 결정하는 것 같음 (0을 쓰면 분리 안되게끔 하는 것 같음)
 menu_lang.add_radiobutton(label="Python")
 menu_lang.add_radiobutton(label="Java")
 menu_lang.add_radiobutton(label="C++")
-menu.add_cascade(label="언어", menu=menu_lang)
+menu.add_cascade(label="언어", menu=menu_lang) # 메뉴창에 적용
 
 # 보기 메뉴 (메뉴에서 체크박스 처럼 여러 항목을 선택할 수 있는 특징 표현 가능)
 menu_view = Menu(menu, tearoff=0)
@@ -41,3 +41,7 @@ root.config(menu=menu)
 
 root.mainloop()
 
+'''
+메뉴 창은 root에 소속되어 있으며
+각 메뉴 항목은 메뉴창에 소속되게 코딩하는 구조를 생각하면 좋을 것 같음
+'''
