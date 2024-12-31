@@ -1,4 +1,4 @@
-class Stack():
+class Stack(): # 스택
     def __init__(self, capacity):
         self.capacity = capacity # 초기 값
         self.array = [None] * self.capacity # 처음 지정한 공간을 미리 확보해두기 위해서 설정한 것 같음

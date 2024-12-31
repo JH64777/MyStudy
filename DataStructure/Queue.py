@@ -2,8 +2,8 @@ class Queue: # 선형 큐
     def __init__(self, capacity):
         self.capacity = capacity
         self.array = [None] * self.capacity
-        self.rear = -1
-        self.front = -1
+        self.rear = -1 # 들어오는 포인터
+        self.front = -1 # 삭제할 때 (dequeue) 나갈 값 가리키는 포인터
     
     def isEmpty(self):
         return self.rear == self.front
